@@ -1,0 +1,321 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+:root {
+
+	/* color palette */
+	--alice-blue: #e6f0fbff;
+	--med-olive: #829075ff;
+	--lt-olive: #a1af94ff;
+	--dk-olive: #282d24ff;
+	--eerie-blk: #1e1e1e;
+	--seasalt: #fafbfdff;
+
+    /* font stack */
+    --fonts: 'Rubik', 'Arial', sans-serif;
+
+	/* bg gradient */
+
+	--bg-gradient: linear-gradient(0deg,rgba(161, 175, 148, 1) 0%, rgba(230, 240, 251, 1) 100%);
+
+	/* box shadow */
+	--shadow: -4px 4px 8px #1e1e1e;
+
+}
+
+body {
+    font-family: var(--fonts);
+	line-height: 1.25;
+	box-sizing: border-box;
+	color: var(--dk-olive);
+}
+
+/* heading styles */
+
+h1, h2, h3 {
+	font-weight: bold;
+	margin: 0.5rem;
+	text-align: center;
+}
+
+h1 {
+	font-size: 2rem;
+}
+
+h2 {
+	font-size: 1.75rem;
+	font-variant: small-caps;
+}
+
+h3 {
+	font-size: 1.5rem;
+	font-weight: 400;
+}
+
+/* text styles */
+
+p {
+	padding: .5rem;
+	margin: 0 auto;
+	max-width: 55ch;
+}
+
+/* link styles */
+
+a {
+	display: block;
+	padding: 1rem;
+	text-decoration: none;
+	color: var(--dk-olive);
+}
+
+/* link pseuds */ 
+
+a:hover {
+	color: var(--med-olive);
+}
+
+h1 a:hover {
+	color: var(--dk-olive);
+}
+
+h1 a:focus {
+	outline: 3px solid var(--dk-olive);
+	border-radius: 3px;
+}
+
+
+/* image styles */ 
+
+img {
+	display: block;
+	border-radius: 3px;
+}
+
+
+/* header main footer */ 
+header, main, footer {
+	width: 100%;
+	max-width: calc(1280px - 2rem);
+	margin: 0 auto;
+}
+
+/* header */
+header {
+	background-image: url(images/swiss-valley.jpg);
+	align-items: center;
+	text-align: center;
+	padding-bottom: 10px;
+}
+
+/* nav */
+
+nav {
+	margin: 0 auto;
+}
+
+nav ul {
+	display: flex;
+	flex-direction: row;
+	gap: 1rem;
+	text-align: center;
+	justify-content: center;
+}
+
+nav a {
+	text-align: center;
+	padding: auto .5rem;
+	font-weight: bold;
+	height: 55px;
+	box-sizing: border-box;
+	font-size: 1.25rem;
+}
+
+nav a:hover {
+	text-shadow: .5px 0px 0px;
+	border-bottom: 2px inset var(--med-olive);
+	transition: text-shadow .10s ease-in;
+}
+
+nav a:focus {
+	outline: 3px solid var(--dk-olive);
+	border-radius: 3px;
+}
+
+main {
+	background: var(--bg-gradient);
+	margin: .5rem auto;
+}
+
+#intro {
+	padding: 2vh;
+}
+
+#intro p {
+	padding-left: 10vw;
+	padding-right: 10vw;
+}
+
+main div {
+	display: flex;
+	justify-content: center;
+}
+
+main section {
+	display: flex;
+	flex-direction: column;
+	padding: .5rem;
+}
+
+/*contact page styles */
+
+
+#contact {
+	display: flex;
+	flex-direction: column;
+}
+
+#contact p {
+	width: 350px;
+	max-width: 55ch;
+}
+
+/* form styles */
+
+form {
+	width: 400px;
+	height: 532px;
+	margin: 5vw auto;
+	padding: 5vh 3vw;
+	background-color: var(--med-olive);
+	border-radius: 5px;
+	font-weight: bold;
+	color: var(--eerie-blk);
+}
+
+input, textarea {
+	display: block; 
+	width: 100%;
+	padding: .5rem;
+	margin-bottom: .5rem;
+	border: 2px inset var(--seasalt);
+	border-radius: 3px;
+}
+
+textarea {
+	height: 100px;
+	margin: .5rem 0 1rem 0;
+}
+
+.required {
+	color: var(--dk-olive);
+	font-size: 1.25rem;
+}
+
+fieldset {
+	row-gap: 8px;
+	display: flex;
+	justify-content: space-evenly;
+	padding: 1rem;
+	margin-bottom: .5rem;
+	border: solid 3px var(--seasalt);
+	border-radius: 5px;
+}
+
+fieldset label { 
+	margin-left: 0;
+}
+
+legend {
+	padding: 5px;
+}
+
+
+input[type="submit"] {
+	background-color: var(--alice-blue);
+	color: var(--dk-olive);
+	width: 50%;
+	border: none;
+	font-weight: bold;
+	font-size: 1.25rem;
+	border-radius: 4px;
+	margin: auto;
+}
+
+/* form pseuds */
+
+input:invalid, textarea:invalid {
+	box-shadow: var(--shadow);
+}
+
+input:focus, textarea:focus {
+	outline: 2px solid var(--seasalt);
+}
+
+input[type="submit"]:focus {
+	outline: 3px solid var(--dk-olive);
+}
+
+input[type="submit"]:hover {
+	box-shadow: var(--shadow);
+}
+
+
+/* footer */
+
+footer {
+	font-weight: bold;
+	background-color: var(--med-olive);
+	text-align: center;
+	padding-top: 1vh;
+}
+
+
+
+
