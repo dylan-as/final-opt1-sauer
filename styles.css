@@ -266,10 +266,13 @@ fieldset {
 	margin-bottom: .5rem;
 	border: solid 3px var(--seasalt);
 	border-radius: 5px;
+	font-size: 1.25rem;
 }
 
 fieldset label { 
-	margin-left: 0;
+	margin-left: .5rem;
+	margin-bottom: .25rem;
+	padding: auto 0;
 }
 
 legend {
